@@ -1,0 +1,757 @@
+/* POPPINS FONT FAMILY */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --color-blue: #4516fe;
+  --color-white: #ffffff;
+  --color-grey: #faf9f9;
+  --color-black: #333;
+}
+
+body {
+  background-color: var(--color-grey);
+}
+
+/* -------------------------------- */
+/* -----------HEADER--------------- */
+/* -------------------------------- */
+header {
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  display: grid;
+  flex-direction: column;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr 1fr 3fr;
+  row-gap: 20px;
+}
+
+/* NAVBAR */
+nav {
+  padding: 44px 48px;
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 36px;
+}
+
+nav .nav-item,
+.nav-item-active {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+nav .nav-item-active {
+  background-color: var(--color-white);
+  color: var(--color-blue);
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 2px;
+}
+
+nav .nav-item:last-child {
+  height: 20px;
+  width: 20px;
+}
+
+/* -------------------------------- */
+/* -----------Header--------------- */
+/* -------------------------------- */
+
+/* Header Div's */
+header div {
+  padding-left: 60px;
+}
+
+/* Header Text */
+.header-text {
+  grid-row: 3 / 4;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.header-text h2 {
+  font-size: 36px;
+}
+
+.header-text p {
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+/* Header Image */
+header div:last-child {
+  grid-column: 2 / -1;
+  grid-row: 2 / -1;
+}
+
+header div:last-child .header-image {
+  width: 100%;
+  filter: drop-shadow(0 0 1px var(--color-black));
+}
+
+/* Companies Div */
+.companies {
+  padding-left: 60px;
+  height: 100px;
+  width: 45%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.company-items {
+  text-decoration: none;
+  font-size: 28px;
+  font-weight: 600;
+  font-family: "Righteous", sans-serif;
+  color: var(--color-black);
+}
+
+/* -------------------------------- */
+/* --------- API Section----------- */
+/* -------------------------------- */
+
+.api {
+  padding: 70px 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* API Heading */
+.api-heading {
+  font-size: 46px;
+  font-weight: 800;
+}
+
+/* API Cards */
+.api .cards {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr 2fr 2fr 1fr;
+  gap: 20px;
+}
+
+.card-active,
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 40px 24px;
+  gap: 20px;
+}
+
+.card-active {
+  background-color: var(--color-white);
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px rgba(51, 51, 51, 0.2);
+  border: none;
+}
+
+.card-active .card-logo,
+.card .card-logo {
+  height: 55px;
+}
+.card-active .card-head-active {
+  color: var(--color-blue);
+}
+
+.card-active .card-head,
+.card-active .card-head-active {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.cards::after {
+  content: ">";
+  display: inline-flex;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  height: 20px;
+  width: 20px;
+  font-size: 54px;
+  padding: 20px;
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* -------------------------------- */
+/* -------- Blog Section ---------- */
+/* -------------------------------- */
+
+/* Blog Heading */
+.blog-heading {
+  padding: 24px 64px;
+  font-weight: 600;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.blog-heading h1 {
+  font-size: 46px;
+}
+
+/* All Articles */
+.blog-heading::after {
+  content: "See All Articles";
+  font-weight: 600;
+  color: #4516fe;
+  cursor: pointer;
+}
+
+/* Blog Cards */
+.blog-cards {
+  padding: 24px 64px;
+  margin-bottom: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 36px;
+}
+
+/* Blog Card 01 */
+.blog-card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  position: relative;
+  background-color: var(--color-white);
+  border-radius: 20px;
+  border-top-left-radius: 70px;
+  box-shadow: 0px 0px 5px rgba(51, 51, 51, 0.2);
+}
+
+/* Blog Image */
+
+.blog-image img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Blog Content */
+.blog-content {
+  padding: 46px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.blog-content h6 {
+  font-size: 16px;
+  color: var(--color-blue);
+}
+
+.blog-content h3 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.blog-bottom,
+.blog-author {
+  position: absolute;
+  bottom: 0;
+}
+
+.blog-bottom {
+  right: 200px;
+  bottom: -30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  height: 70px;
+  width: 70px;
+  background-color: var(--color-white);
+  border-radius: 50%;
+}
+
+.blog-author {
+  width: 100px;
+  bottom: 6px;
+  right: 30px;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 0 20px;
+}
+
+.blog-bottom .blog-card-bottom-image {
+  height: 70px;
+}
+
+/* -------------------------------- */
+/* -------- FAQ SECTION  ---------- */
+/* -------------------------------- */
+
+.faq-section {
+  margin: 48px 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: #e9edff;
+}
+
+/* FAQ Content */
+.faq-content {
+  padding: 24px 0;
+  padding-left: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.faq-content h2 {
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.faq-content h4 {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-top: -15px;
+}
+
+.faq-content h4:nth-child(3) {
+  font-size: 18px;
+}
+
+/* FAQ BUTTON */
+.faq-content button {
+  padding: 10px 20px;
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  border: none;
+  border-radius: 5px;
+}
+
+/* FAQ Image */
+.faq-image img {
+  height: 100%;
+  width: 100%;
+}
+
+/* -------------------------------- */
+/* ---------- DOWNLOAD- ----------- */
+/* -------------------------------- */
+
+.download-section {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  padding: 64px;
+}
+
+/* Download Content */
+
+.download-content h1 {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.download-content h1 span {
+  font-weight: 300;
+}
+
+/* Download EMail */
+
+.download-email {
+  padding: 36px;
+}
+
+.download-email form {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.download-email form input {
+  width: 90%;
+  font-size: 16px;
+  padding: 24px;
+  background-color: #e9edff;
+  color: var(--color-black);
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+}
+
+.download-email form button {
+  position: absolute;
+  right: 5%;
+  top: 7px;
+  font-size: 20px;
+  padding: 14px 50px;
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+/* -------------------------------- */
+/* ----------- FOOTER ------------- */
+/* -------------------------------- */
+.footer-section {
+  padding: 46px;
+  background-color: var(--color-blue);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Footer Left */
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 36px;
+}
+
+.footer-left .list {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 40px;
+  color: var(--color-white);
+  opacity: 0.8;
+}
+
+.footer-left .list-items {
+  cursor: pointer;
+}
+
+/* Footer Right */
+
+.footer-section div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.footer-section div:last-child > .footer-right {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-section div:last-child > .footer-right .footer-logos {
+  height: 50px;
+}
+
+.footer-section div:last-child > .logos-list {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  color: var(--color-white);
+  gap: 26px;
+}
+
+/* --------------- MEIDA QUERIES --------------------- */
+
+@media screen and (min-width: 1049px) {
+  header {
+    height: 530px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  nav {
+    justify-content: center;
+  }
+
+  header div,
+  .companies {
+    padding-left: 24px;
+  }
+
+  .api {
+    padding: 60px 24px;
+  }
+
+  .api .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .card-active,
+  .card {
+    align-items: center;
+  }
+
+  .blog-heading,
+  .blog-cards {
+    padding: 24px 36px;
+  }
+
+  .blog-card {
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 0;
+  }
+
+  .blog-image {
+    height: 80%;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .blog-content {
+    align-items: center;
+    text-align: center;
+    padding: 0 0 68px 0;
+  }
+}
+
+@media screen and (max-width: 1049px) {
+  .header-text h2 {
+    font-size: 28px;
+  }
+
+  header div:last-child .header-image {
+    width: 500px;
+    filter: drop-shadow(0 0 1px var(--color-black));
+  }
+
+  .companies {
+    padding: 0 34px;
+    width: 89%;
+  }
+}
+
+@media screen and (max-width: 940px) {
+  header {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 46px 0;
+  }
+
+  nav {
+    padding: 24px 48px;
+  }
+
+  .header-text {
+    align-items: center;
+    padding: 0;
+  }
+
+  header div:last-child {
+    display: none;
+  }
+
+  .api-heading {
+    font-size: 36px;
+  }
+
+  .api .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .blog-heading h1 {
+    font-size: 36px;
+  }
+
+  .faq-section {
+    justify-content: center;
+  }
+
+  .faq-content {
+    padding: 24px 0;
+    align-items: center;
+    text-align: center;
+  }
+
+  .faq-image {
+    display: none;
+  }
+
+  .download-section {
+    grid-template-columns: 1fr;
+  }
+
+  .download-content {
+    text-align: center;
+  }
+
+  .footer-left .list {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .footer-section div:last-child {
+    flex-direction: row;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  header {
+    padding: 0 0 46px 0;
+  }
+
+  nav {
+    padding: 24px 0;
+  }
+
+  .companies {
+    padding: 0;
+    width: 100%;
+    justify-content: center;
+    gap: 36px;
+  }
+
+  .company-items {
+    font-size: 20px;
+  }
+
+  .api-heading {
+    font-size: 30px;
+  }
+
+  .blog-heading h1 {
+    font-size: 30px;
+  }
+
+  .blog-cards {
+    grid-template-columns: 1fr;
+    gap: 70px;
+  }
+
+  .blog-card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .blog-image {
+    height: 100%;
+    width: 100%;
+  }
+
+  .download-section {
+    padding: 12px;
+  }
+
+  .footer-section div:last-child {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  nav .nav-item {
+    display: none;
+  }
+
+  nav .nav-item:nth-child(5),
+  nav .nav-item:last-child {
+    display: block;
+  }
+
+  .api .cards {
+    grid-template-columns: 1fr;
+    padding: 0 24px;
+  }
+
+  .blog-heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .blog-card {
+    grid-template-columns: 1fr;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .blog-image {
+    height: 80%;
+    width: 80%;
+  }
+
+  .faq-content {
+    padding: 24px;
+  }
+
+  .faq-content h2 {
+    font-size: 36px;
+  }
+
+  .faq-content h4 {
+    font-size: 12px;
+  }
+
+  .faq-content h4:nth-child(3) {
+    font-size: 14px;
+  }
+
+  .download-section {
+    padding: 0;
+  }
+
+  .download-content h1 {
+    font-size: 28px;
+  }
+
+  .download-email form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 36px;
+    width: 100%;
+  }
+
+  .download-email form input {
+    width: 80%;
+    padding: 24px 36px;
+    text-align: center;
+  }
+
+  .download-email form button {
+    position: relative;
+    top: 0;
+    right: 0;
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    padding: 0 18px 60px 18px;
+  }
+
+  .header-text h2 {
+    font-size: 20px;
+  }
+
+  .header-text p {
+    font-size: 16px;
+    padding: 0 15px;
+  }
+
+  .companies .company-items {
+    font-size: 14px;
+  }
+
+  .footer-section {
+    padding: 30px 18px;
+    flex-direction: column;
+  }
+
+  .footer-left {
+    display: none;
+  }
+}
