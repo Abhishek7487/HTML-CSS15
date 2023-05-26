@@ -1,0 +1,374 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;600;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 65.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f5f2f0;
+  overflow: hidden;
+}
+
+.container {
+  padding: 0 6.8rem;
+}
+
+/* NAVBAR */
+
+.section-navbar {
+  padding: 4.8rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Nav logo */
+.section-navbar .nav-logo img {
+  width: 7rem;
+}
+
+/* Nav lsit */
+.section-navbar .nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 8rem;
+  position: relative;
+}
+
+.section-navbar .nav-list .nav-list--item {
+  font-size: 1.4rem;
+  color: #868686;
+  cursor: pointer;
+}
+
+.section-navbar .nav-list .nav-list--item:nth-child(2) {
+  font-size: 1.6rem;
+  color: #000;
+}
+
+.section-navbar .nav-list .nav-line {
+  position: absolute;
+  left: -36rem;
+  width: 67%;
+  border-radius: 4rem;
+  height: 0.15rem;
+  background-color: #000;
+}
+
+/* ----------------------------------------- */
+/* ---------- SECTION HEADER --------------- */
+/* ----------------------------------------- */
+
+.section-header {
+  display: flex;
+}
+
+/* Header Imagebox */
+.header-imagebox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* height: 100vh; */
+  width: 50rem;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.header-imagebox img {
+  width: 100%;
+}
+
+/* Header Textbox */
+.header-textbox {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  margin-left: 48rem;
+}
+
+/* Header Top */
+.header-top {
+  display: grid;
+  grid-template-columns: 4fr 2fr 1fr;
+  gap: 2.4rem;
+}
+
+.header-top .heading {
+  font-size: 12.6rem;
+  font-family: "Merriweather", sans-serif;
+  font-weight: 900;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+.header-top .heading .heading-span {
+  margin-left: 14rem;
+  color: #333;
+  -webkit-text-stroke-width: 0;
+}
+
+.sub-heading {
+  color: #777;
+  font-size: 2.4rem;
+  font-weight: 400;
+  font-family: "Merriweather";
+  align-self: flex-end;
+  margin-bottom: 1rem;
+}
+
+.social-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 3.6rem;
+}
+
+.social-icons {
+  align-self: flex-end;
+}
+
+.social-icons img {
+  height: 2.2rem;
+  width: 2.2rem;
+}
+
+/* Header Middle */
+.header-middle {
+  height: 6rem;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.header-btn {
+  display: block;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  background-color: #333;
+  color: #f5f2f0;
+  padding: 1.4rem 4.8rem;
+}
+
+/* Header Bottom */
+
+.header-bottom {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  gap: 8.4rem;
+}
+
+.linked-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  position: relative;
+}
+
+.linked-list li {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+.linked-list li .link-dot {
+  height: 1rem;
+  width: 1rem;
+  padding: 0.6rem;
+  border-radius: 50%;
+  background-color: #777;
+}
+
+.linked-list li .link-text {
+  text-transform: capitalize;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #777;
+}
+.linked-list .active-item .link-dot {
+  background-color: #333;
+}
+
+.linked-list .active-item .link-text {
+  color: #333;
+}
+
+.linked-list .link-line {
+  height: 100%;
+  width: 1.2px;
+  background-color: #868686;
+  position: absolute;
+  top: 16px;
+  left: 6px;
+}
+
+.bottom-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  list-style: none;
+}
+
+.bottom-content li .quotes i {
+  font-size: 3.4rem;
+  color: #333;
+}
+
+.bottom-content li .bottom-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.bottom-content li .bottom-image {
+  height: 30rem;
+}
+
+.bottom-arrow {
+  position: relative;
+}
+
+.bottom-arrow .arrow {
+  height: 12rem;
+  position: absolute;
+  top: 12rem;
+  left: 3.8rem;
+}
+
+@media screen and (max-width: 516px) {
+  html {
+    font-size: 46.5%;
+  }
+
+  body {
+    overflow: auto;
+  }
+
+  .container {
+    padding: 0;
+  }
+
+  .section-navbar {
+    padding: 2.4rem;
+
+    background-color: #dcd0c7a0;
+    position: relative;
+  }
+
+  .section-navbar .nav-line,
+  .section-navbar .nav-list {
+    display: none;
+  }
+
+  .section-header {
+    flex-direction: column;
+  }
+
+  .section-header .header-top {
+    height: 75rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.504),
+        rgba(0, 0, 0, 0.541)
+      ),
+      url(../images/pexels-rfstudio-3819572.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .header-imagebox {
+    display: none;
+  }
+
+  .section-header .header-textbox {
+    margin: 0;
+  }
+
+  .header-top {
+    grid-template-columns: 1fr;
+  }
+
+  .header-top .heading {
+    font-size: 7.8rem;
+    color: #f5f2f0;
+  }
+
+  .header-top .sub-heading {
+    font-size: 3.6rem;
+    align-self: center;
+    color: #f5f2f0;
+  }
+
+  .header-top .heading .heading-span {
+    margin-left: -1.5rem;
+    color: #f5f2f0;
+  }
+
+  .social-list {
+    position: absolute;
+    top: 3%;
+    right: 5%;
+    flex-direction: row;
+  }
+
+  .header-middle {
+    justify-content: center;
+  }
+
+  .header-bottom {
+    grid-template-columns: 1fr;
+    gap: 3.6rem;
+    padding: 3.6rem 0;
+  }
+
+  .header-bottom .linked-list {
+    justify-self: center;
+  }
+
+  .header-bottom .link-line {
+    display: none;
+  }
+
+  .linked-list li .link-text {
+    font-size: 2.4rem;
+  }
+
+  .bottom-content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .bottom-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .bottom-arrow .arrow {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+}
